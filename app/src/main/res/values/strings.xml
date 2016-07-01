@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RumaAe</string>
+    <string name="app_name">RumaAê Goiânia</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Senha</string>
     <string name="action_sign_in">Entrar</string>
@@ -10,4 +10,12 @@
     <string name="error_invalid_password">Senha inválida</string>
     <string name="error_invalid_email">Email inválido</string>
     <string name="label_error_invalid_response">Resposta inválida do servidor</string>
+    <string name="title_activity_solicitacoes">Solicitacoes</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="title_activity_motivo">motivo</string>
 </resources>

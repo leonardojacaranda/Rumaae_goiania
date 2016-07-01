@@ -33,6 +33,12 @@
             android:name=".WebTaskLogin"
             android:enabled="true"
             android:exported="true" />
+
+        <activity
+            android:name=".Solicitacoes"
+            android:label="@string/title_activity_solicitacoes"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Motivo"></activity>
     </application>
 
 </manifest>
