@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:onClick="startSecondActivity"
     android:padding="30dp">
 
     <ProgressBar
@@ -17,11 +16,18 @@
     android:visibility="gone" />
 
     <ImageView
-        android:layout_width="163dp"
-        android:layout_height="214dp"
+        android:layout_width="222dp"
+        android:layout_height="216dp"
         android:id="@+id/image"
         android:src="@drawable/logo_rumaae"
         android:layout_gravity="center_horizontal" />
+
+    <android.support.v4.widget.Space
+        android:layout_width="248dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/view"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="4.26" />
 
     <EditText
         android:id="@+id/email"
@@ -57,39 +63,41 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Esqueceu sua senha ?"
-        android:layout_gravity="center"/>
+        android:layout_gravity="center" />
 
 
     <View
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="5dp"
         android:layout_weight="1"/>
 
     <Button
         android:id="@+id/email_sign_in_button"
-        android:layout_width="match_parent"
-        android:layout_height="24dp"
+        android:layout_width="214dp"
+        android:layout_height="32dp"
         android:text="Entrar"
-        android:background="@color/darkorange"
+        android:background="@color/button_entrar"
         android:textStyle="bold"
         android:onClick="attemptLogin"
-        android:layout_weight="0.44" />
+        android:layout_gravity="center"/>
 
     <View
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="5dp"
         android:layout_weight="1"/>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="33dp"
+        android:layout_width="214dp"
+        android:layout_height="32dp"
         android:text="Entrar com facebook"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/button_facebook"
         android:textStyle="bold"
-        android:onClick="attemptLogin"/>
+        android:onClick="attemptLogin"
+        android:textColor="#ffffff"
+        android:layout_gravity="center" />
     <View
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        android:layout_height="5dp"
         android:layout_weight="1"/>
 
     <TextView
@@ -97,5 +105,6 @@
         android:layout_height="wrap_content"
         android:text="Cadastrar"
         android:layout_gravity="center"
-        android:textSize="20dp"/>
+        android:textSize="20dp"
+        android:onClick="startSecondActivity"/>
 </LinearLayout>
