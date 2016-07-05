@@ -22,13 +22,6 @@
         android:src="@drawable/logo_rumaae"
         android:layout_gravity="center_horizontal" />
 
-    <android.support.v4.widget.Space
-        android:layout_width="248dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/view"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="4.26" />
-
     <EditText
         android:id="@+id/email"
         android:layout_width="match_parent"
@@ -53,23 +46,13 @@
         android:layout_weight="1"
         />
 
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_weight="1"/>
-
-
-    <TextView
+   <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Esqueceu sua senha ?"
-        android:layout_gravity="center" />
-
-
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="5dp"
-        android:layout_weight="1"/>
+        android:layout_gravity="center"
+       android:layout_marginTop="5dp"
+        android:layout_marginBottom="20dp"/>
 
     <Button
         android:id="@+id/email_sign_in_button"
@@ -78,13 +61,10 @@
         android:text="Entrar"
         android:background="@color/button_entrar"
         android:textStyle="bold"
-        android:onClick="attemptLogin"
-        android:layout_gravity="center"/>
-
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="5dp"
-        android:layout_weight="1"/>
+        android:onClick="startSecondActivity"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"/>
 
     <Button
         android:layout_width="214dp"
@@ -94,11 +74,8 @@
         android:textStyle="bold"
         android:onClick="attemptLogin"
         android:textColor="#ffffff"
-        android:layout_gravity="center" />
-    <View
-        android:layout_width="wrap_content"
-        android:layout_height="5dp"
-        android:layout_weight="1"/>
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"/>
 
     <TextView
         android:layout_width="wrap_content"

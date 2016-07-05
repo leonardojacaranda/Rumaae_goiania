@@ -31,6 +31,6 @@
         android:layout_margin="@dimen/fab_margin"
         android:src="@drawable/ic_add_white_24dp"
         android:adjustViewBounds="false"
-        android:onClick="motivo" />
+        android:onClick="startSecondActivity" />
 
 </android.support.design.widget.CoordinatorLayout>
