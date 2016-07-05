@@ -19,11 +19,6 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.NoSubscriberEvent;
 import org.greenrobot.eventbus.Subscribe;
 
-import com.example.leonardo.rumaae.MainActivity;
-import com.example.leonardo.rumaae.R;
-import com.example.leonardo.rumaae.User;
-import com.example.leonardo.rumaae.WebTaskLogin;
-
 /**
  * A login screen that offers login via email/password.
  */
@@ -43,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState); //cria uma instância para o login daquele momento
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
         // Configuraçao do fomulário de login
         mEmailView = (EditText) findViewById(R.id.email); //campo para digitar o email
 
@@ -182,7 +177,7 @@ public class LoginActivity extends AppCompatActivity {
         mAuthTask = null;
         showProgress(false);
 
-        Intent activity = new Intent(this, MainActivity.class);
+        Intent activity = new Intent(this, Login.class);
         activity.putExtra("message","olá");
         startActivity(activity);
 

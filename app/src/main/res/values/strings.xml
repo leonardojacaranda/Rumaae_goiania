@@ -10,12 +10,13 @@
     <string name="error_invalid_password">Senha inválida</string>
     <string name="error_invalid_email">Email inválido</string>
     <string name="label_error_invalid_response">Resposta inválida do servidor</string>
-    <string name="title_activity_solicitacoes">Solicitacoes</string>
+
+    <string name="title_activity_solicitacoes">Solicitações</string>
+    <string name="title_activity_motivo">Motivo</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
 
-    <string name="title_activity_motivo">motivo</string>
 </resources>

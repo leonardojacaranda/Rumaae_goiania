@@ -8,14 +8,20 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-        <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
+
+        <activity android:name=".Login"
+            android:theme="@style/AppTheme.NoActionBar"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".secondActivity" />
+
+
+
+        <activity android:name=".Cadastro" />
 
         <service
             android:name=".LoginActivity"
@@ -34,11 +40,25 @@
             android:enabled="true"
             android:exported="true" />
 
+
+
         <activity
             android:name=".Solicitacoes"
             android:label="@string/title_activity_solicitacoes"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Motivo"></activity>
+
+
+
+        <activity android:name=".Motivo"
+            android:label="@string/title_activity_motivo">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.leonardo.rumaae.Motivo"
+                />
+        </activity>
+
+
+
     </application>
 
 </manifest>
