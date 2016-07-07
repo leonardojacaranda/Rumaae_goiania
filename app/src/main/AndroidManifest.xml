@@ -9,6 +9,24 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <service
+            android:name=".LoginActivity"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".User"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".WebTaskBase"
+            android:enabled="true"
+            android:exported="true"
+            />
+        <service
+            android:name=".WebTaskLogin"
+            android:enabled="true"
+            android:exported="true" />
+
 
         <activity android:name=".Login"
             android:theme="@style/AppTheme.NoActionBar"
@@ -21,31 +39,19 @@
 
 
 
-        <activity android:name=".Cadastro" />
-
-        <service
-            android:name=".LoginActivity"
-            android:enabled="true"
-            android:exported="true" />
-        <service
-            android:name=".User"
-            android:enabled="true"
-            android:exported="true" />
-        <service
-            android:name=".WebTaskBase"
-            android:enabled="true"
-            android:exported="true" />
-        <service
-            android:name=".WebTaskLogin"
-            android:enabled="true"
-            android:exported="true" />
+        <activity android:name=".Cadastro"
+            android:label="@string/title_activity_cadastro">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.leonardo.rumaae.Cadastro"/>
+       </activity>
 
 
 
         <activity
             android:name=".Solicitacoes"
             android:label="@string/title_activity_solicitacoes"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"/>
 
 
 
@@ -53,8 +59,7 @@
             android:label="@string/title_activity_motivo">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.leonardo.rumaae.Motivo"
-                />
+                android:value="com.example.leonardo.rumaae.Motivo"/>
         </activity>
 
 

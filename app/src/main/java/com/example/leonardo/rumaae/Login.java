@@ -16,6 +16,10 @@ public class Login extends AppCompatActivity {
     }
 
     public void startSecondActivity(View view) {
+        Intent secondActivity = new Intent(this, Cadastro.class);
+        startActivity(secondActivity);
+    }
+    public void Solic(View view) {
         Intent secondActivity = new Intent(this, Solicitacoes.class);
         startActivity(secondActivity);
     }

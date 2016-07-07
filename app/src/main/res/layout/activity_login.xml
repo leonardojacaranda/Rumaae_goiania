@@ -61,7 +61,7 @@
         android:text="Entrar"
         android:background="@color/button_entrar"
         android:textStyle="bold"
-        android:onClick="startSecondActivity"
+        android:onClick="Solic"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"/>

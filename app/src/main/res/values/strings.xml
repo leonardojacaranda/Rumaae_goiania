@@ -11,6 +11,7 @@
     <string name="error_invalid_email">Email inválido</string>
     <string name="label_error_invalid_response">Resposta inválida do servidor</string>
 
+    <string name="title_activity_cadastro">Cadastro</string>
     <string name="title_activity_solicitacoes">Solicitações</string>
     <string name="title_activity_motivo">Motivo</string>
 
