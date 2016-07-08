@@ -1,5 +1,6 @@
 package com.example.leonardo.rumaae;
 
+import android.content.Intent;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -32,9 +33,13 @@ public class Motivo extends AppCompatActivity {
             case android.R.id.home:
                 NavUtils.navigateUpFromSameTask(this);
                 return true;
+            case R.id.check:
+                startActivity(new Intent(this, Cadastro.class));
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
 
 }
+
