@@ -67,6 +67,7 @@
         android:layout_marginBottom="20dp"/>
 
     <Button
+        android:id="@+id/login_button"
         android:layout_width="214dp"
         android:layout_height="32dp"
         android:text="Entrar com facebook"
