@@ -1,15 +1,9 @@
 package com.example.leonardo.rumaae;
 
-import android.app.Activity;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
-import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.v7.app.AlertDialog;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -18,49 +12,69 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
-import java.io.File;
+public class Camera extends AppCompatActivity {
 
-public class Camera extends Activity {
-    Button button;
-    ImageView imageView;
-    static final int CAM_REQUEST = 1;
+
+    Button btnTakePhoto;
+    ImageView imgTakePhoto;
+    private static final int CAM_REQUEST = 1313;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_camera);
-        button = (Button) findViewById(R.id.button);
-        imageView = (ImageView)findViewById(R.id.image_view);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                Intent camera_intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-                File file = getFile();
-                camera_intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(file));
-                startActivityForResult(camera_intent, CAM_REQUEST);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+        btnTakePhoto = (Button) findViewById(R.id.button);
+        imgTakePhoto = (ImageView) findViewById(R.id.imageview);
 
-            }
-        });
-    }
-
-    private File getFile() {
-        File folder = new File("sdcard/camera_app");
-
-        if (!folder.exists()) {
-            folder.mkdir();
-        }
-        File image_file = new File(folder, "cam_image.jpg");
-
-        return image_file;
+        btnTakePhoto.setOnClickListener(new btnTakePhotoClicker());
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
-        String path = "sdcard/camera_app/cam_image.jpg";
-        imageView.setImageDrawable(Drawable.createFromPath(path));
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode == CAM_REQUEST) {
+            Bitmap thumbnail = (Bitmap) data.getExtras().get("data");
+            imgTakePhoto.setImageBitmap(thumbnail);
+        }
+    }
+    class btnTakePhotoClicker implements Button.OnClickListener
+    {
+
+        @Override
+        public void onClick(View v) {
+            Intent cameraintent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+            startActivityForResult(cameraintent, CAM_REQUEST);
+        }
+    }
 
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.camera, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        switch (id) {
+            case android.R.id.home:
+                startActivity(new Intent(this, Motivo.class));
+                return true;
+            case R.id.enviar:
+                startActivity(new Intent(this, Solicitacoes.class));
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

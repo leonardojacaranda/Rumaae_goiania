@@ -72,7 +72,7 @@
         </activity>
         <activity
             android:name=".Camera"
-            android:label="ImgCan">
+            android:label="@string/title_activity_camera">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

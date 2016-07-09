@@ -10,6 +10,8 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+        // Enabling multidex support.
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -26,6 +28,7 @@ dependencies {
     compile 'com.android.support:design:23.4.0'
     compile 'org.greenrobot:eventbus:3.0.0'
     compile 'com.squareup.okhttp:okhttp:2.5.0'
+    compile 'com.android.support:multidex:1.0.0'
     // Android SDK
     compile 'com.facebook.android:facebook-android-sdk:4.+'
     // Audience Network SDK. Only versions 4.6.0 and above are available

@@ -13,7 +13,8 @@
 
     <string name="title_activity_cadastro">Cadastro</string>
     <string name="title_activity_solicitacoes">Solicitações</string>
-    <string name="title_activity_motivo">Motivo</string>
+    <string name="title_activity_motivo">Motivo da Solicitação</string>
+    <string name="title_activity_camera">Inserir foto</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>

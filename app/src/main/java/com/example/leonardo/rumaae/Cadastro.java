@@ -1,8 +1,10 @@
 package com.example.leonardo.rumaae;
 
+import android.content.Intent;
 import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 
 public class Cadastro extends AppCompatActivity {
@@ -15,6 +17,12 @@ public class Cadastro extends AppCompatActivity {
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.cadastro, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -23,7 +31,10 @@ public class Cadastro extends AppCompatActivity {
 
         switch (id) {
             case android.R.id.home:
-                NavUtils.navigateUpFromSameTask(this);
+                startActivity(new Intent(this, Login.class));
+                return true;
+            case R.id.check:
+                startActivity(new Intent(this, Login.class));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
