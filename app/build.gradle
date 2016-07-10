@@ -4,6 +4,11 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
 
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+
     defaultConfig {
         applicationId "com.example.leonardo.rumaae"
         minSdkVersion 15
@@ -12,6 +17,7 @@ android {
         versionName "1.0"
         // Enabling multidex support.
         multiDexEnabled true
+
     }
     buildTypes {
         release {
@@ -21,18 +27,20 @@ android {
     }
 }
 
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
+    // Android SDK
+    // Audience Network SDK. Only versions 4.6.0 and above are available
+    // Account Kit
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.android.support:design:23.4.0'
     compile 'org.greenrobot:eventbus:3.0.0'
     compile 'com.squareup.okhttp:okhttp:2.5.0'
     compile 'com.android.support:multidex:1.0.0'
-    // Android SDK
     compile 'com.facebook.android:facebook-android-sdk:4.+'
-    // Audience Network SDK. Only versions 4.6.0 and above are available
     compile 'com.facebook.android:audience-network-sdk:4.+'
-    // Account Kit
     compile 'com.facebook.android:account-kit-sdk:4.+'
+    compile 'com.google.android.gms:play-services:9.2.0'
 }

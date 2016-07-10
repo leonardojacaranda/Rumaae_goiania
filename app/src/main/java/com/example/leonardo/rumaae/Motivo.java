@@ -34,7 +34,7 @@ public class Motivo extends AppCompatActivity {
                 NavUtils.navigateUpFromSameTask(this);
                 return true;
             case R.id.check:
-                startActivity(new Intent(this, Camera.class));
+                startActivity(new Intent(this, MapsActivity.class));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

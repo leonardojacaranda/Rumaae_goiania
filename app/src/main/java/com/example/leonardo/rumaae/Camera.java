@@ -68,7 +68,7 @@ public class Camera extends AppCompatActivity {
 
         switch (id) {
             case android.R.id.home:
-                startActivity(new Intent(this, Motivo.class));
+                startActivity(new Intent(this, MapsActivity.class));
                 return true;
             case R.id.enviar:
                 startActivity(new Intent(this, Solicitacoes.class));
