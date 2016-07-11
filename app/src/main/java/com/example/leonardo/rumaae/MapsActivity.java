@@ -99,12 +99,4 @@ public class MapsActivity extends ActionBarActivity implements OnMapReadyCallbac
         mMap.addMarker(new MarkerOptions().position(latLng).title("I'm here"));
     }
 
-
-
-    Snackbar make (View view, CharSequence text, int duration){
-        
-    }
-
-
-
 }
