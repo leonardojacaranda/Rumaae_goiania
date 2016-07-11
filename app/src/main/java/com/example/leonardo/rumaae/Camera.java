@@ -3,7 +3,6 @@ package com.example.leonardo.rumaae;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.provider.MediaStore;
-import android.support.v4.app.NavUtils;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -26,7 +25,7 @@ public class Camera extends AppCompatActivity {
         setContentView(R.layout.activity_camera);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        btnTakePhoto = (Button) findViewById(R.id.button);
+        btnTakePhoto = (Button) findViewById(R.id.buttonCamera);
         imgTakePhoto = (ImageView) findViewById(R.id.imageview);
 
         btnTakePhoto.setOnClickListener(new btnTakePhotoClicker());

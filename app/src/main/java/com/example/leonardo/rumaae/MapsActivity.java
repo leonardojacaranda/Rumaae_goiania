@@ -2,12 +2,15 @@ package com.example.leonardo.rumaae;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -19,10 +22,13 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.widget.Toast;
 
-public class MapsActivity extends ActionBarActivity implements OnMapReadyCallback  {
+public class MapsActivity extends ActionBarActivity implements OnMapReadyCallback, GoogleMap.OnMapClickListener {
 
     private GoogleMap mMap;
+    private LatLng actualLatlong;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,14 +43,14 @@ public class MapsActivity extends ActionBarActivity implements OnMapReadyCallbac
     }
 
 
-
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
+        mMap.setOnMapClickListener(this);
 
         // Add a marker in Sydney and move the camera
         LatLng marcador = new LatLng(10, 10);
-        mMap.addMarker(new MarkerOptions().position(marcador).title("I'm here"));
+
         mMap.moveCamera(CameraUpdateFactory.newLatLng(marcador));
         if (ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             // TODO: Consider calling
@@ -85,6 +91,20 @@ public class MapsActivity extends ActionBarActivity implements OnMapReadyCallbac
         }
     }
 
+    @Override
+    public void onMapClick(LatLng latLng) {
+        Log.d("", String.valueOf(latLng));
+        actualLatlong = latLng;
+        mMap.clear();
+        mMap.addMarker(new MarkerOptions().position(latLng).title("I'm here"));
+    }
+
+
+
+    Snackbar make (View view, CharSequence text, int duration){
+        
+    }
+
+
+
 }
-
-
