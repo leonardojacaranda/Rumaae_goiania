@@ -20,11 +20,6 @@ import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.NoSubscriberEvent;
 import org.greenrobot.eventbus.Subscribe;
 
-import com.facebook.FacebookCallback;
-import com.facebook.FacebookException;
-import com.facebook.FacebookSdk;
-import com.facebook.login.LoginResult;
-import com.facebook.login.widget.LoginButton;
 
 
 /**
@@ -205,5 +200,10 @@ public class LoginActivity extends AppCompatActivity {
         mAuthTask = null;
         showProgress(false);
     }
+
+
+
+
+
 
 }
