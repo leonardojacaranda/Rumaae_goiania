@@ -66,14 +66,17 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"/>
 
-    <com.facebook.login.widget.LoginButton
+    <Button
         android:id="@+id/login_button"
         android:layout_width="214dp"
         android:layout_height="32dp"
+        android:text="Entrar com facebook"
+        android:background="@color/button_facebook"
+        android:textStyle="bold"
+        android:onClick="attemptLogin"
+        android:textColor="#ffffff"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:onClick="facebook"/>
+        android:layout_marginBottom="20dp"/>
 
     <TextView
         android:layout_width="wrap_content"
