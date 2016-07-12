@@ -1,5 +1,6 @@
 package com.example.leonardo.rumaae;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.design.widget.FloatingActionButton;
@@ -40,6 +41,13 @@ public class MapsActivity extends ActionBarActivity implements OnMapReadyCallbac
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        Context contexto = getApplicationContext();
+        String texto = "Clique no lugar do seu problema";
+        int duracao = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(contexto, texto,duracao);
+        toast.show();
     }
 
 
@@ -96,7 +104,7 @@ public class MapsActivity extends ActionBarActivity implements OnMapReadyCallbac
         Log.d("", String.valueOf(latLng));
         actualLatlong = latLng;
         mMap.clear();
-        mMap.addMarker(new MarkerOptions().position(latLng).title("I'm here"));
+        mMap.addMarker(new MarkerOptions().position(latLng).title("Aqui está o problema!"));
     }
 
 }
