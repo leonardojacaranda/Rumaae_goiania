@@ -10,9 +10,6 @@
     tools:context=".Login"
     android:orientation="vertical">
 
-    <ProgressBar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
 
     <EditText
@@ -21,7 +18,8 @@
         android:inputType="textEmailAddress"
         android:hint="Nome"
         android:maxLines="1"
-        android:singleLine="true" />
+        android:singleLine="true"
+        android:layout_marginTop="50dp"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -30,6 +28,7 @@
         android:hint="Sobrenome"
         android:maxLines="1"
         android:singleLine="true"
+        android:layout_marginTop="30dp"
         />
 
     <EditText
@@ -39,6 +38,7 @@
         android:hint="E-mail"
         android:maxLines="1"
         android:singleLine="true"
+        android:layout_marginTop="30dp"
         />
 
     <EditText
@@ -48,6 +48,7 @@
         android:hint="Senha"
         android:maxLines="1"
         android:singleLine="true"
+        android:layout_marginTop="30dp"
         />
 
 </LinearLayout>
