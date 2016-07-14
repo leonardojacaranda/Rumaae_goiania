@@ -43,4 +43,5 @@ dependencies {
     compile 'com.facebook.android:audience-network-sdk:4.+'
     compile 'com.facebook.android:account-kit-sdk:4.+'
     compile 'com.google.android.gms:play-services:9.2.0'
+    compile 'com.android.support:support-v4:23.4.0'
 }
