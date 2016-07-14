@@ -34,7 +34,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="100dp"
         android:id="@+id/imageView2"
         android:background="@drawable/ic_info_outline_black_48dp" />
 
