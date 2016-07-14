@@ -12,12 +12,12 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link PerfilFragmente.OnFragmentInteractionListener} interface
+ * {@link PerfilFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link PerfilFragmente#newInstance} factory method to
+ * Use the {@link PerfilFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class PerfilFragmente extends Fragment {
+public class PerfilFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +29,7 @@ public class PerfilFragmente extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public PerfilFragmente() {
+    public PerfilFragment() {
         // Required empty public constructor
     }
 
@@ -39,11 +39,11 @@ public class PerfilFragmente extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment PerfilFragmente.
+     * @return A new instance of fragment PerfilFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static PerfilFragmente newInstance(String param1, String param2) {
-        PerfilFragmente fragment = new PerfilFragmente();
+    public static PerfilFragment newInstance(String param1, String param2) {
+        PerfilFragment fragment = new PerfilFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -96,7 +96,7 @@ public class PerfilFragmente extends Fragment {
      * fragment to allow an interaction in this fragment to be communicated
      * to the activity and potentially other fragments contained in that
      * activity.
-     * <p>
+     * <p/>
      * See the Android Training lesson <a href=
      * "http://developer.android.com/training/basics/fragments/communicating.html"
      * >Communicating with Other Fragments</a> for more information.
