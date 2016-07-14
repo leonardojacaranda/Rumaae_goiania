@@ -59,13 +59,17 @@ public class Solicitacoes extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_notificacoes) {
+        if (id == R.id.nav_camera) {
+            // Handle the camera action
+        } else if (id == R.id.nav_gallery) {
 
-        } else if (id == R.id.nav_editar_perfil) {
+        } else if (id == R.id.nav_slideshow) {
 
-        } else if (id == R.id.nav_trocar_senha) {
+        } else if (id == R.id.nav_manage) {
 
-        } else if (id == R.id.nav_sair) {
+        } else if (id == R.id.nav_share) {
+
+        } else if (id == R.id.nav_send) {
 
         }
 
