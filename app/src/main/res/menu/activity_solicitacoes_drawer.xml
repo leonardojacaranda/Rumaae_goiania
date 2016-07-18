@@ -6,7 +6,7 @@
             android:id="@+id/nav_notificacoes"
             android:icon="@drawable/notifications"
             android:title="Notificações"
-            android:checkable="true"/>
+            android:checkable="true" />
         <item
             android:id="@+id/nav_editar_perfil"
             android:icon="@drawable/user"

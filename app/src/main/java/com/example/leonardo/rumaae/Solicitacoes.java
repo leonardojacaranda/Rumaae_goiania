@@ -11,6 +11,7 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.widget.Switch;
 
 public class Solicitacoes extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -18,10 +19,15 @@ public class Solicitacoes extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_solicitacoes);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.getMenu().findItem(R.id.nav_notificacoes)
+                .setActionView(new Switch(this));
+        ((Switch) navigationView.getMenu().findItem(R.id.nav_notificacoes).getActionView()).setChecked(true);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -36,8 +42,6 @@ public class Solicitacoes extends AppCompatActivity
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.setDrawerListener(toggle);
         toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
@@ -59,6 +63,7 @@ public class Solicitacoes extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_notificacoes) {
+            ((Switch) item.getActionView()).toggle();
 
         } else if (id == R.id.nav_editar_perfil) {
             Intent intent = new Intent(this, EditarPerfilActivity.class);
