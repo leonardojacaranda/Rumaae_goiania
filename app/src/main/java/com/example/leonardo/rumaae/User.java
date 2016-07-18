@@ -1,9 +1,5 @@
 package com.example.leonardo.rumaae;
 
-import android.app.Service;
-import android.content.Intent;
-import android.os.IBinder;
-
 public class User {
 
     private String name;

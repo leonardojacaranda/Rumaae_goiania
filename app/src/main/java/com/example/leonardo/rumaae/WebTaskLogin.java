@@ -1,11 +1,9 @@
 package com.example.leonardo.rumaae;
 
 import android.content.Context;
-
 import org.greenrobot.eventbus.EventBus;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.HashMap;
 import java.util.Map;
 
