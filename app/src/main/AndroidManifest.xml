@@ -104,11 +104,10 @@
             android:label="@string/title_activity_maps" />
         <activity
             android:name=".EditarPerfilActivity"
-            android:label="@string/title_activity_editar_perfil"/>
+            android:label="@string/title_activity_editar_perfil" />
         <activity
             android:name=".TrocarSenhaActivity"
-            android:label="@string/title_activity_trocar_senha">
-        </activity>
+            android:label="@string/title_activity_trocar_senha"></activity>
     </application>
 
 </manifest>

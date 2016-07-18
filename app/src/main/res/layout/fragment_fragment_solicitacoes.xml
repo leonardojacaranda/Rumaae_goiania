@@ -1,0 +1,32 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.leonardo.rumaae.FragmentSolicitacoes"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:background="#f1f1f1">
+
+
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/CardView"
+        android:layout_width="365dp"
+        android:layout_height="170dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        card_view:cardCornerRadius="1dp"
+        android:layout_centerHorizontal="true">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/imageButton"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_alignBottom="@+id/foto"
+            android:background="@drawable/messenger_button_blue_bg_selector" />
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

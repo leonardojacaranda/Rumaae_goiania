@@ -22,4 +22,6 @@
         app:headerLayout="@layout/nav_header_solicitacoes"
         app:menu="@menu/activity_solicitacoes_drawer" />
 
+
+
 </android.support.v4.widget.DrawerLayout>
